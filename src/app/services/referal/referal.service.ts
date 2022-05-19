@@ -1,15 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
-
-  baseUrl = 'https://eks.sefapool-test.gotbitgames.co';
-
+export class ReferalService {
 
   constructor(private http: HttpClient) { }
 
@@ -21,12 +17,11 @@ export class LoginService {
       })
     };
     console.log(httpOptions)
-    return this.http.post<any>('/auth/login', {'username':'1','password':'1'}, httpOptions)
+    return this.http.post<any>('/auth/login', {
+      "user_id": "{{user-id}}",
+      "access_token": "{{access-token}}"
+    }, httpOptions)
 
-  }
-
-  getSTO(): Observable<any> {
-    return this.http.get<any>(this.baseUrl+'/request_token')
   }
 
 }

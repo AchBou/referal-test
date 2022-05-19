@@ -11,7 +11,6 @@ export class LoginService {
   baseUrl = 'https://eks.sefapool-test.gotbitgames.co';
 
 
-
   constructor(private http: HttpClient) { }
 
   login(sto: string, body: any): Observable<any> {
@@ -22,7 +21,7 @@ export class LoginService {
       })
     };
 
-    return this.http.post<any>('/auth/login', body, httpOptions)
+    return this.http.post<any>(this.baseUrl+'/auth/login', body, httpOptions)
 
   }
 

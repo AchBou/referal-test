@@ -9,6 +9,8 @@ export class ReferalService {
 
   constructor(private http: HttpClient) { }
 
+  baseUrl = 'https://eks.sefapool-test.gotbitgames.co'
+
   getReferalCode(): Observable<any> {
     let token = String(localStorage.getItem('access-token'));
     let userId = String(localStorage.getItem('user-id'));
@@ -23,7 +25,7 @@ export class ReferalService {
     console.log(httpOptions)
     let body = {'user_id':userId}
     console.log(body)
-    return this.http.post<any>('/referrals/get_ref_code', {'user_id':userId}, httpOptions)
+    return this.http.post<any>(this.baseUrl+'/referrals/get_ref_code', {'user_id':userId}, httpOptions)
 
   }
 

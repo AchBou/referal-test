@@ -1,1 +1,12 @@
-<p>login works!</p>
+
+<form (submit)="submit()">
+  <div class="logo" >
+    <img src="assets/logo.png" alt="" />
+  </div>
+  <input [(ngModel)]="username"  autoComplete='off' type="text"  placeholder='Username' name="username"/>
+  <input [(ngModel)]="password" autoComplete='off' type="text"  placeholder='Password' name="password" />
+  <button class="submit" type="submit">
+  Login
+  </button>
+</form>
+

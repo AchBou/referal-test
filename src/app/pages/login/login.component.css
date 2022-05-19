@@ -1,0 +1,36 @@
+.logo{
+  text-align: center;
+  margin: auto;
+}
+
+.logo img{
+  width: 200px;
+  height: 200px;
+}
+
+form{
+  width: 70%;
+  margin: 20vh auto;
+}
+
+
+input {
+  display: block;
+  width: 80%;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 5px;
+
+}
+
+.submit{
+  color: white;
+  margin: auto;
+  display: block;
+  padding: 10px 35px;
+  border-radius: 5px;
+  background: transparent;
+  border: 2px solid aquamarine;
+  cursor: pointer;
+}
+

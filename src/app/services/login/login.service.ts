@@ -11,9 +11,10 @@ export class LoginService {
   baseUrl = 'https://eks.sefapool-test.gotbitgames.co';
 
 
+
   constructor(private http: HttpClient) { }
 
-  login(sto: string): Observable<any> {
+  login(sto: string, body: any): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
@@ -21,7 +22,7 @@ export class LoginService {
       })
     };
 
-    return this.http.post<any>('/auth/login', {'username':'1','password':'1'}, httpOptions)
+    return this.http.post<any>('/auth/login', body, httpOptions)
 
   }
 

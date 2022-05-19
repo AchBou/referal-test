@@ -3,5 +3,10 @@
         "target": "https://eks.sefapool-test.gotbitgames.co",
         "secure": false,
         "changeOrigin": true
-    }
+    },
+  "/referrals/get_ref_code": {
+    "target": "https://eks.sefapool-test.gotbitgames.co",
+    "secure": false,
+    "changeOrigin": true
+  }
 }

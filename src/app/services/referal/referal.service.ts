@@ -9,18 +9,21 @@ export class ReferalService {
 
   constructor(private http: HttpClient) { }
 
-  login(sto: string): Observable<any> {
+  getReferalCode(): Observable<any> {
+    let token = String(localStorage.getItem('access-token'));
+    let userId = String(localStorage.getItem('user-id'));
+    console.log(userId)
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        'init-token': sto
+        'access-token': token,
+        'user-id': userId,
       })
     };
     console.log(httpOptions)
-    return this.http.post<any>('/auth/login', {
-      "user_id": "{{user-id}}",
-      "access_token": "{{access-token}}"
-    }, httpOptions)
+    let body = {'user_id':userId}
+    console.log(body)
+    return this.http.post<any>('/referrals/get_ref_code', {'user_id':userId}, httpOptions)
 
   }
 

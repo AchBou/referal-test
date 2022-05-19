@@ -1,0 +1,19 @@
+h1{
+  text-align: center;
+}
+.links{
+  float: right;
+}
+
+.links a{
+  margin: 0 10px;
+  padding: 10px 30px;
+  border: 2px solid aquamarine;
+  border-radius: 5px
+}
+
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}

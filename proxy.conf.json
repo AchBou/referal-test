@@ -1,0 +1,7 @@
+{
+    "/auth/login": {
+        "target": "https://eks.sefapool-test.gotbitgames.co",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

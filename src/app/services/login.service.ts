@@ -17,14 +17,11 @@ export class LoginService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
-        'Access-Control-Allow-Credentials' : 'true',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, PUT, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With',
-        'init_token': sto
+        'init-token': sto
       })
     };
-    return this.http.post<any>(this.baseUrl+'/auth/login', {'login':'1','password':'1'}, httpOptions)
+    console.log(httpOptions)
+    return this.http.post<any>('/auth/login', {'username':'1','password':'1'}, httpOptions)
 
   }
 

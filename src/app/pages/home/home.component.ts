@@ -7,14 +7,13 @@ import {ReferalService} from "../../services/referal/referal.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  referal: string = '';
+  referral: string = '';
 
-  constructor(public referalService: ReferalService) { }
+  constructor(public referralService: ReferalService) { }
 
   ngOnInit(): void {
-    this.referalService.getReferalCode().subscribe((res)=>{
-      console.log(res)
-      this.referal = res.ref_code
+    this.referralService.getReferalCode().subscribe((res)=>{
+      this.referral = res.ref_code
     })
   }
 

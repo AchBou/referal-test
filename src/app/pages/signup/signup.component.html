@@ -1,1 +1,23 @@
-<p>signup works!</p>
+<form (submit)="submit(f)" #f="ngForm">
+  <div class="logo" >
+    <img src="assets/logo.png" alt="logo" routerLink="/"/>
+  </div>
+
+  <input [(ngModel)]="username" autoComplete='off' type="text"  placeholder='Username' name="username" #usernameRef="ngModel" required/>
+  <p *ngIf="usernameRef.invalid && (usernameRef.dirty || usernameRef.touched)" class="warning">Username is required.</p>
+
+  <input ngModel autoComplete='off' type="password"  placeholder='Password' name="password" minlength="6" #passwordRef="ngModel" required/>
+  <p *ngIf="passwordRef.invalid && (passwordRef.dirty || passwordRef.touched)" class="warning">Password is required and must be more than 6 characters.</p>
+
+  <input ngModel autoComplete='off' type="password"  placeholder='Password' name="re-password" #rePasswordRef="ngModel" required/>
+  <p *ngIf="rePasswordRef.invalid && (rePasswordRef.dirty || rePasswordRef.touched)" class="warning">Please enter the same password.</p>
+
+  <input ngModel autoComplete='off' type="email"  placeholder='Email' name="Email" #emailRef="ngModel" required email/>
+  <p *ngIf="emailRef.invalid && (emailRef.dirty || emailRef.touched)" class="warning">Please enter a valid email.</p>
+
+  <button class="submit" type="submit">
+    Signup
+  </button>
+  <p class="signin" routerLink="/login">Already sign up ? log in </p>
+</form>
+

@@ -1,0 +1,65 @@
+.logo{
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.logo img{
+  width: 20%;
+  height: 20%;
+}
+
+form{
+  width: 70%;
+  margin: 20vh auto;
+}
+
+
+input {
+  display: block;
+  width: 70%;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 5px;
+  border-color: white;
+}
+
+input:hover , input:active{
+  box-shadow: 0 0 15px aquamarine;
+}
+
+.submit{
+  color: white;
+  margin: auto;
+  display: block;
+  padding: 10px 35px;
+  border-radius: 5px;
+  background: transparent;
+  border: 2px solid aquamarine;
+  cursor: pointer;
+}
+
+.submit{
+  color: #5edfae;
+  border-color: white;
+}
+
+.signin{
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.alert{
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.warning{
+  text-align: center;
+  color: #c2b9d1;
+  font-size: 18px;
+}
+

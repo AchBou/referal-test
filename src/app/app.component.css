@@ -1,19 +1,60 @@
-h1{
+.title{
   text-align: center;
-}
-.links{
-  float: right;
+  cursor: pointer;
+  font-size: 3em;
 }
 
-.links a{
+header .links{
+  float: right;
+  margin: 50px;
+}
+
+.logo{
+  display: inline-block;
+  margin: 0 10px;
+}
+.logo img{
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+}
+
+
+.home-logo img{
+  /*width: 250px;*/
+  /*height: 250px;*/
+}
+
+main  .links{
+  margin: 100px auto;
+}
+main  .links{
+  margin: 100px auto;
+}
+
+a{
   margin: 0 10px;
   padding: 10px 30px;
   border: 2px solid aquamarine;
   border-radius: 5px
 }
 
-
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #5edfae;
+  border-color: white;
+}
+
+.centered {
+  margin-top: 5%;
+  text-align: center;
+}
+
+h2{
+  font-size: 2em;
 }

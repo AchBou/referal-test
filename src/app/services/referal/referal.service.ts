@@ -22,9 +22,7 @@ export class ReferalService {
         'user-id': userId,
       })
     };
-    console.log(httpOptions)
-    let body = {'user_id':userId}
-    console.log(body)
+
     return this.http.post<any>(this.baseUrl+'/referrals/get_ref_code', {'user_id':userId}, httpOptions)
 
   }

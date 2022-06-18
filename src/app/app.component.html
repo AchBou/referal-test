@@ -1,11 +1,22 @@
-<h1>
-  Sefapool 3D app backOffice
-</h1>
-
-<header>
+<main *ngIf="isHomepage" class="centered">
+  <div class="home-logo" >
+    <img src="assets/large-logo.png" alt="logo" routerLink="/"/>
+  </div>
+  <h2>Welcome to the Sefapool 3D app referal Plateform</h2>
   <div class="links">
     <a routerLink="/login"> Login</a>
     <a routerLink="/register"> Signup</a>
+  </div>
+</main>
+
+<header *ngIf="!isHomepage && !isLoginPage">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Logo" routerLink="/">
+  </div>
+  <div class="links">
+<!--    <a *ngIf="!loggedIn" routerLink="/login"> Login</a>-->
+<!--    <a *ngIf="!loggedIn" routerLink="/register"> Signup</a>-->
+    <a *ngIf="loggedIn" (click)="logout()"> Logout</a>
   </div>
 </header>
 

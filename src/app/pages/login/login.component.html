@@ -1,12 +1,16 @@
-
-<form (submit)="submit()">
+<form (submit)="submit(f)"  #f="ngForm">
   <div class="logo" >
-    <img src="assets/logo.png" alt="" />
+    <img src="assets/logo.png" alt="logo" routerLink="/"/>
   </div>
-  <input [(ngModel)]="username" autoComplete='off' type="text"  placeholder='Username' name="username"/>
-  <input [(ngModel)]="password" autoComplete='off' type="text"  placeholder='Password' name="password" />
-  <button class="submit" type="submit">
-  Login
+  <input [(ngModel)]="username" autoComplete='off' type="text"  placeholder='Username' name="username" required/>
+  <input [(ngModel)]="password" autoComplete='off' type="password"  placeholder='Password' name="password" required/>
+  <p class="warning" *ngIf="f.invalid && (f.dirty || f.touched)"> Username and password are both required</p>
+  <button class="submit signin" type="submit" >
+    Login
   </button>
+  <button class="submit signup" routerLink="/register">
+    Register
+  </button>
+  <p class="alert" *ngIf="showIncorrectCredits"> Username or password are incorrect</p>
 </form>
 

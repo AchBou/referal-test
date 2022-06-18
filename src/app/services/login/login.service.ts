@@ -22,11 +22,24 @@ export class LoginService {
     };
 
     return this.http.post<any>(this.baseUrl+'/auth/login', body, httpOptions)
-
   }
 
   getSTO(): Observable<any> {
     return this.http.get<any>(this.baseUrl+'/request_token')
   }
 
+  signup(sto: string, body: any): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'init-token': sto
+      })
+    };
+
+    return this.http.post<any>(this.baseUrl+'/auth/', body, httpOptions)
+  }
+
+  logout(){
+    localStorage.clear()
+  }
 }
